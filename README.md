@@ -41,8 +41,10 @@ pytest-Tests/
 ├── test_kms/                # Tests on KMS API
 ├── test_hdfs/               # Tests on HDFS encryption cycle
 ├── pytest.ini               # Registers custom pytest markers
-├── requirements.txt
 ├── run_tests.sh             # Script to automate test execution
+├── requirements.txt
+├── readme.md
+
 ```
 
 ### Running Tests
@@ -55,7 +57,7 @@ Before running the tests, configure container behavior using the following envir
   export CLEAN_CONTAINERS=1
 ~~~
 
-After the initial setup, you can disable fresh container creation by setting below for next re-runs:
+After the initial setup, you can disable fresh container creation by setting below for the next re-runs:
 ~~~
   export CLEAN_CONTAINERS=0
 ~~~
@@ -73,7 +75,7 @@ Run the test script using:
   
   ./run-tests.sh postgres hadoop
   
-  # Note: If additional-services are specified, db-type must also be explicitly specified.
+  # Note: If additional-services are specified, db-type must also be explicitly specified
 
 ~~~
 
