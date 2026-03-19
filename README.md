@@ -30,16 +30,17 @@ documentation.
 
 This test suite validates REST API endpoints for KMS (Key Management Service) and tests HDFS encryption functionalities including key management and file operations within encryption zones.
 
-**test_kms  :** contains test cases for checking KMS API functionality
+**hdfs :** contains test cases for checking KMS functionality through hdfs encryption lifecycle
 
-**test_hdfs :** contains test cases for checking KMS functionality through hdfs encryption lifecycle
+**kms  :** contains test cases for checking KMS API functionality
+
 
 ### Directory Structure
 
 ```
 pytest-Tests/
-├── test_kms/                # Tests on KMS API
-├── test_hdfs/               # Tests on HDFS encryption cycle
+├── hdfs/                    # Tests on HDFS encryption cycle
+├── kms/                     # Tests on KMS API
 ├── pytest.ini               # Registers custom pytest markers
 ├── run_tests.sh             # Script to automate test execution
 ├── requirements.txt
@@ -71,7 +72,7 @@ Run the test script using:
   # valid values for db-type: mysql/postgres/oracle , postgres is the default
   # additional-services: multiple services can be specified separated by space
   
-  # e.g for running tests within test_kms and test_hdfs use below command:
+  # e.g for running tests within kms and hdfs use below command:
   
   ./run-tests.sh postgres hadoop
   
@@ -88,3 +89,7 @@ If you only need to start the infrastructure i.e containers (without running tes
 This is useful when tests are failing due to incomplete container setup.
 
 After the infrastructure is successfully up, set RUN_TESTS=1 and rerun the script to execute the tests without setup issues.
+
+#### Note
+
+Reports generated after tests execution in html can be viewed in any browser for detailed test results.
