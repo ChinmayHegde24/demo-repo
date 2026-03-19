@@ -55,9 +55,7 @@ Before running the tests, configure container behavior using the following envir
   export CLEAN_CONTAINERS=1
 ~~~
 
-If not set, the script will reuse existing containers (if available).
-
-After the initial setup, you can disable fresh container creation by setting:
+After the initial setup, you can disable fresh container creation by setting below for next re-runs:
 ~~~
   export CLEAN_CONTAINERS=0
 ~~~
